@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="index.css" />
+    <link rel="stylesheet" href="styles/header.css" />
+    <link rel="stylesheet" href="styles/components.css" />
+    <link rel="stylesheet" href="styles/footer.css" />
+    <link rel="stylesheet" href="styles/theme.css" />
+    <script defer src="scripts/theme.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap"
+      rel="stylesheet"
+    />
+    <title>DigitalWave</title>
+  </head>
+
+  <body>
+    <!-- NAVBAR -->
+    <header class="navbar site-header">
+      <nav class="nav-container main-nav">
+        <div class="logo">
+          <svg
+            fill="currentColor"
+            viewBox="0 0 48 48"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M42.4379 44C42.4379 44 36.0744 33.9038 41.1692 24C46.8624 12.9336 42.2078 4 42.2078 4L7.01134 4C7.01134 4 11.6577 12.932 5.96912 23.9969C0.876273 33.9029 7.27094 44 7.27094 44L42.4379 44Z"
+            ></path>
+          </svg>
+          <h2>DigitalWave</h2>
+        </div>
+
+        <ul class="nav-links" role="navigation" aria-label="Main">
+          <li><a href="pages/Servicios.html">Servicios</a></li>
+          <li><a href="pages/Testimonios.html">Testimonios</a></li>
+          <li><a href="pages/FaQ.html">FAQ</a></li>
+          <li><a href="pages/Contactos.html">Contacto</a></li>
+        </ul>
+        <button id="themeToggle" class="theme-toggle" aria-label="Cambiar tema">
+          🌙
+        </button>
+      </nav>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section class="hero">
+      <div class="hero-content container">
+        <h1>Creando las Olas del Futuro Digital</h1>
+        <p>
+          Agencia Creativa Especializada en Diseño, Branding y Marketing Digital
+        </p>
+
+        <a class="cta-btn" href="pages/Servicios.html">Explorar Servicios</a>
+      </div>
+    </section>
+
+    <!-- HERO SECTION -->
+    <section class="hero">
+      <div class="container">
+        <div class="hero-card">
+          <div class="hero-card-inner">
+            <h1 class="hero-title">Brand Identity Design</h1>
+            <p class="hero-sub">
+              We craft unique and memorable brand identities that resonate with
+              your audience and elevate your business.
+            </p>
+            <div class="hero-actions">
+              <a class="btn primary" href="pages/Servicios.html"
+                >View Our Work</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- INTRO + PROCESS -->
+    <section class="container intro">
+      <p class="intro-copy">
+        A strong brand identity is more than just a logo; it's the heart of your
+        company's narrative. At DigitalWave, we dive deep to understand your
+        vision and values, translating them into a cohesive visual system that
+        captures your essence and connects with your customers.
+      </p>
+
+      <h2 class="section-title">Our Process</h2>
+      <div class="process">
+        <div class="step">
+          <div class="step-icon">1</div>
+          <div class="step-body">
+            <h4>Discovery & Research</h4>
+            <p>
+              We start by conducting in-depth research to understand your
+              business, target audience, and competitive landscape.
+            </p>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-icon">2</div>
+          <div class="step-body">
+            <h4>Strategy & Positioning</h4>
+            <p>
+              Based on our research, we define your brand's voice, messaging,
+              and market position.
+            </p>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-icon">3</div>
+          <div class="step-body">
+            <h4>Design & Development</h4>
+            <p>
+              Our creative team brings your brand to life — logos, color
+              palettes, typography, and visual elements.
+            </p>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-icon">4</div>
+          <div class="step-body">
+            <h4>Delivery & Launch</h4>
+            <p>
+              We deliver a complete brand package, including assets and
+              comprehensive guidelines.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FEATURED WORK -->
+    <section class="container featured">
+      <h2 class="section-title">Featured Work</h2>
+      <div class="featured-grid">
+        <article class="work-card">
+          <div
+            class="work-media"
+            style="
+              background-image: url('https://picsum.photos/id/1011/800/500');
+            "
+          ></div>
+          <div class="work-body">
+            <h3>Innovate Inc.</h3>
+            <p class="muted">
+              A complete brand overhaul for a leading tech startup, focusing on
+              a futuristic and trustworthy identity.
+            </p>
+            <a class="view-link" href="#">View Case Study →</a>
+          </div>
+        </article>
+
+        <article class="work-card">
+          <div
+            class="work-media"
+            style="
+              background-image: url('https://picsum.photos/id/1025/800/500');
+            "
+          ></div>
+          <div class="work-body">
+            <h3>GreenLeaf Organics</h3>
+            <p class="muted">
+              Crafting a fresh, earthy brand identity and packaging that
+              communicates natural quality.
+            </p>
+            <a class="view-link" href="#">View Case Study →</a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="container cta-section">
+      <h2>Ready to Build Your Brand?</h2>
+      <p class="muted">
+        Let's work together to create a brand identity that tells your story and
+        drives your business forward.
+      </p>
+      <a class="btn primary" href="pages/Contactos.html">Get a Quote</a>
+    </section>
+
+    <footer class="site-footer">
+      <div class="container">
+        © 2025 DigitalWave — Todos los derechos reservados
+      </div>
+    </footer>
+  </body>
+</html>
