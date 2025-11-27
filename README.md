@@ -181,12 +181,12 @@ El tema seleccionado se guarda en localStorage para persistir entre sesiones.
 
 ## 🎯 Próximas Mejoras
 
-- [ ] Integración con backend para formulario de contacto
-- [ ] Animaciones adicionales con GSAP
-- [ ] Blog section
-- [ ] Portfolio/proyectos realizados
-- [ ] Optimización de imágenes con lazy loading
-- [ ] PWA (Progressive Web App)
+- [x] Integración con backend para formulario de contacto
+- [x] Animaciones adicionales con GSAP
+- [x] Blog section
+- [x] Portfolio/proyectos realizados
+- [x] Optimización de imágenes con lazy loading
+- [x] PWA (Progressive Web App)
 
 ## 📄 Licencia
 
@@ -198,20 +198,6 @@ Este proyecto está bajo la Licencia MIT. Consulta el archivo `LICENSE` para má
 
 - GitHub: [@Jose-Familia](https://github.com/Jose-Familia)
 - Repositorio: [DigitalWave-Creative-Agency](https://github.com/Jose-Familia/DigitalWave-Creative-Agency)
-
-## 🤝 Contribuciones
-
-Las contribuciones son bienvenidas. Para cambios importantes:
-
-1. Fork el proyecto
-2. Crea una rama para tu característica (`git checkout -b feature/NuevaCaracteristica`)
-3. Commit tus cambios (`git commit -m 'Agregar nueva característica'`)
-4. Push a la rama (`git push origin feature/NuevaCaracteristica`)
-5. Abre un Pull Request
-
-## 📞 Soporte
-
-Si tienes alguna pregunta o problema, por favor abre un issue en el repositorio de GitHub.
 
 ---
 

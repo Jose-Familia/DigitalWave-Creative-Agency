@@ -134,17 +134,15 @@ ul {
    ========================================== */
 
 .site-header {
-  background: linear-gradient(
-    90deg,
-    rgba(8, 19, 27, 0.95),
-    rgba(3, 11, 15, 0.85)
-  );
+  background: var(--bg);
+  border-bottom: 1px solid rgba(0, 170, 255, 0.15);
   padding: 1.125rem 1.75rem;
   color: var(--text);
   position: sticky;
   top: 0;
   z-index: 100;
   backdrop-filter: blur(10px);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
 .main-nav {
@@ -168,6 +166,7 @@ ul {
 .logo svg {
   width: 32px;
   height: 32px;
+  color: var(--accent);
 }
 
 .logo h2 {
@@ -183,17 +182,19 @@ ul {
 }
 
 .nav-links li a {
-  color: var(--muted);
+  color: var(--text);
   text-decoration: none;
   padding: 0.5rem 0.75rem;
   border-radius: 6px;
   transition: all 0.2s ease;
+  opacity: 0.85;
 }
 
 .nav-links li a:hover,
 .nav-links li a.active {
-  color: var(--text);
-  background: rgba(255, 255, 255, 0.05);
+  color: var(--accent);
+  background: rgba(0, 170, 255, 0.1);
+  opacity: 1;
 }
 
 .theme-toggle-wrapper {
@@ -202,19 +203,22 @@ ul {
 }
 
 .theme-toggle {
-  background: transparent;
-  border: none;
+  background: rgba(0, 170, 255, 0.1);
+  border: 1px solid rgba(0, 170, 255, 0.2);
   font-size: 1.25rem;
   cursor: pointer;
-  color: var(--muted);
+  color: var(--text);
   margin-left: 1rem;
   padding: 0.5rem;
+  border-radius: 6px;
   transition: all 0.2s ease;
 }
 
 .theme-toggle:hover {
+  background: rgba(0, 170, 255, 0.2);
   color: var(--accent);
-  transform: scale(1.1);
+  transform: scale(1.05);
+  border-color: var(--accent);
 }
 
 /* Hamburger Menu */
@@ -886,22 +890,36 @@ ul {
 }
 
 .contact-form input,
-.contact-form textarea {
+.contact-form textarea,
+.contact-form select {
   padding: 0.875rem 1rem;
   border-radius: 8px;
-  border: 1px solid rgba(0, 170, 255, 0.2);
-  background: var(--card-bg);
+  border: 1px solid rgba(0, 170, 255, 0.3);
+  background: var(--bg);
   color: var(--text);
   font-family: inherit;
   font-size: 1rem;
   transition: all 0.2s ease;
+  width: 100%;
+}
+
+.contact-form select {
+  cursor: pointer;
+}
+
+.contact-form select option {
+  background: var(--bg);
+  color: var(--text);
+  padding: 0.5rem;
 }
 
 .contact-form input:focus,
-.contact-form textarea:focus {
+.contact-form textarea:focus,
+.contact-form select:focus {
   outline: none;
   box-shadow: 0 0 0 3px rgba(0, 170, 255, 0.15);
   border-color: var(--accent);
+  background: var(--bg);
 }
 
 .contact-form textarea {
