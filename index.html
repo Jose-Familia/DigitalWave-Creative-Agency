@@ -12,8 +12,15 @@
       href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&amp;family=DM+Sans:wght@400..700&amp;display=swap"
       rel="stylesheet"
     />
-    <script defer src="scripts/animations.js"></script>
     <script defer src="scripts/menu.js"></script>
+    <script
+      async
+      id="gsap-runtime"
+      src="https://cdn.jsdelivr.net/npm/gsap@3.15.1/dist/gsap.min.js"
+      integrity="sha384-3vCAhD+a3BOliP3QqjQINn6ZWiZxoqu0WFxX5ZQZgqekDZuSb1mJBrrLMmu94H8f"
+      crossorigin="anonymous"
+    ></script>
+    <script defer src="scripts/animations.js"></script>
     <title>DigitalWave - Agencia Digital Creativa</title>
   </head>
 
@@ -66,13 +73,10 @@
       <section class="hero-main">
         <div class="container hero-layout">
           <div class="hero-content">
-            <p class="section-label">Agencia creativa digital</p>
-            <h1 class="hero-title">
-              Diseño y desarrollo para <span>marcas digitales.</span>
-            </h1>
+            <h1 class="hero-title">Ideas en <span>movimiento.</span></h1>
             <p class="hero-description">
-              Creamos sitios web, identidades visuales y estrategias de marketing
-              para negocios que quieren crecer en internet.
+              Creamos sitios web, identidades visuales y campañas para marcas que
+              quieren crecer en internet.
             </p>
             <div class="hero-actions">
               <a href="pages/Contactos.html#formulario" class="btn btn-primary btn-lg"
@@ -83,9 +87,10 @@
               >
             </div>
           </div>
-          <div class="hero-art" aria-hidden="true">
-            <img src="assets/digitalwave-hero.webp" alt="" width="960" height="1200" fetchpriority="high" />
-          </div>
+        </div>
+        <div class="hero-art" aria-hidden="true">
+          <img src="assets/digitalwave-hero.webp" alt="" width="960" height="1200" fetchpriority="high" />
+          <span class="hero-sweep"></span>
         </div>
       </section>
 
@@ -99,8 +104,8 @@
             </a>
           </div>
 
-          <div class="services-grid">
-            <article class="service-card" data-animate>
+          <div class="service-list">
+            <article class="service-row">
               <h3 class="service-title">Desarrollo Web</h3>
               <p class="service-description">
                 Sitios web modernos, rápidos y responsivos que convierten
@@ -111,7 +116,7 @@
               </a>
             </article>
 
-            <article class="service-card" data-animate>
+            <article class="service-row">
               <h3 class="service-title">Branding & Identidad</h3>
               <p class="service-description">
                 Construimos marcas memorables que conectan emocionalmente con tu
@@ -122,7 +127,7 @@
               </a>
             </article>
 
-            <article class="service-card" data-animate>
+            <article class="service-row">
               <h3 class="service-title">Marketing Digital</h3>
               <p class="service-description">
                 Estrategias de marketing que aumentan tu visibilidad y generan
@@ -133,7 +138,7 @@
               </a>
             </article>
 
-            <article class="service-card" data-animate>
+            <article class="service-row">
               <h3 class="service-title">Consultoría Digital</h3>
               <p class="service-description">
                 Asesoramiento experto para optimizar tu presencia digital y
@@ -150,56 +155,59 @@
 
       <!-- PROCESO -->
       <section class="process-section">
-        <div class="container">
+        <div class="container process-layout">
           <div class="section-header">
             <h2 class="section-title">Cómo trabajamos</h2>
           </div>
 
-          <ol class="process-timeline">
-            <li class="process-step" data-animate>
-              <div class="step-number" aria-hidden="true">01</div>
-              <div class="step-content">
-                <h3 class="step-title">Descubrimiento</h3>
-                <p class="step-description">
-                  Analizamos tu negocio, audiencia y competencia para entender tus
-                  necesidades únicas
-                </p>
-              </div>
-            </li>
+          <div class="process-sequence">
+            <span class="process-trace" aria-hidden="true"></span>
+            <ol class="process-timeline">
+              <li class="process-step">
+                <div class="step-number" aria-hidden="true">01</div>
+                <div class="step-content">
+                  <h3 class="step-title">Descubrimiento</h3>
+                  <p class="step-description">
+                    Analizamos tu negocio, audiencia y competencia para entender tus
+                    necesidades únicas
+                  </p>
+                </div>
+              </li>
 
-            <li class="process-step" data-animate>
-              <div class="step-number" aria-hidden="true">02</div>
-              <div class="step-content">
-                <h3 class="step-title">Estrategia</h3>
-                <p class="step-description">
-                  Desarrollamos un plan detallado con objetivos claros y métricas
-                  de éxito
-                </p>
-              </div>
-            </li>
+              <li class="process-step">
+                <div class="step-number" aria-hidden="true">02</div>
+                <div class="step-content">
+                  <h3 class="step-title">Estrategia</h3>
+                  <p class="step-description">
+                    Desarrollamos un plan detallado con objetivos claros y métricas
+                    de éxito
+                  </p>
+                </div>
+              </li>
 
-            <li class="process-step" data-animate>
-              <div class="step-number" aria-hidden="true">03</div>
-              <div class="step-content">
-                <h3 class="step-title">Ejecución</h3>
-                <p class="step-description">
-                  Diseñamos y desarrollamos tu solución con atención meticulosa al
-                  detalle
-                </p>
-              </div>
-            </li>
+              <li class="process-step">
+                <div class="step-number" aria-hidden="true">03</div>
+                <div class="step-content">
+                  <h3 class="step-title">Ejecución</h3>
+                  <p class="step-description">
+                    Diseñamos y desarrollamos tu solución con atención meticulosa al
+                    detalle
+                  </p>
+                </div>
+              </li>
 
-            <li class="process-step" data-animate>
-              <div class="step-number" aria-hidden="true">04</div>
-              <div class="step-content">
-                <h3 class="step-title">Optimización</h3>
-                <p class="step-description">
-                  Monitoreamos resultados y optimizamos continuamente para
-                  maximizar el impacto
-                </p>
-              </div>
-            </li>
-          </ol>
+              <li class="process-step">
+                <div class="step-number" aria-hidden="true">04</div>
+                <div class="step-content">
+                  <h3 class="step-title">Optimización</h3>
+                  <p class="step-description">
+                    Monitoreamos resultados y optimizamos continuamente para
+                    maximizar el impacto
+                  </p>
+                </div>
+              </li>
+            </ol>
+          </div>
         </div>
       </section>
 
@@ -214,7 +222,7 @@
           </div>
 
           <div class="testimonials-grid">
-            <article class="testimonial-card" data-animate>
+            <article class="testimonial-card">
               <div class="testimonial-stars" role="img" aria-label="5 de 5 estrellas">★★★★★</div>
               <blockquote class="testimonial-quote">
                 "DigitalWave transformó completamente nuestra presencia online. El
@@ -229,7 +237,7 @@
               </div>
             </article>
 
-            <article class="testimonial-card" data-animate>
+            <article class="testimonial-card">
               <div class="testimonial-stars" role="img" aria-label="5 de 5 estrellas">★★★★★</div>
               <blockquote class="testimonial-quote">
                 "Profesionales excepcionales. No solo crearon una marca increíble
@@ -243,7 +251,7 @@
               </div>
             </article>
 
-            <article class="testimonial-card" data-animate>
+            <article class="testimonial-card">
               <div class="testimonial-stars" role="img" aria-label="5 de 5 estrellas">★★★★★</div>
               <blockquote class="testimonial-quote">
                 "La estrategia de marketing digital que desarrollaron superó todas

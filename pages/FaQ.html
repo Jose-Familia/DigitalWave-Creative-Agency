@@ -13,8 +13,15 @@
       href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&amp;family=DM+Sans:wght@400..700&amp;display=swap"
       rel="stylesheet"
     />
-    <script defer src="../scripts/animations.js"></script>
     <script defer src="../scripts/menu.js"></script>
+    <script
+      async
+      id="gsap-runtime"
+      src="https://cdn.jsdelivr.net/npm/gsap@3.15.1/dist/gsap.min.js"
+      integrity="sha384-3vCAhD+a3BOliP3QqjQINn6ZWiZxoqu0WFxX5ZQZgqekDZuSb1mJBrrLMmu94H8f"
+      crossorigin="anonymous"
+    ></script>
+    <script defer src="../scripts/animations.js"></script>
   </head>
   <body>
     <a class="skip-link" href="#contenido">Saltar al contenido</a>
@@ -84,7 +91,7 @@
         <div class="faq-topics">
           <section class="faq" id="desarrollo-web" aria-labelledby="titulo-desarrollo-web">
             <h2 id="titulo-desarrollo-web">Desarrollo web</h2>
-            <details data-animate>
+            <details>
               <summary>¿Cuánto tiempo toma desarrollar un sitio web?</summary>
               <p>
                 El tiempo de desarrollo varía según la complejidad del proyecto.
@@ -95,7 +102,7 @@
                 un cronograma detallado al inicio del proyecto.
               </p>
             </details>
-            <details data-animate>
+            <details>
               <summary>¿Los sitios son responsive y mobile-friendly?</summary>
               <p>
                 Absolutamente. Todos nuestros diseños son 100% responsive y
@@ -104,7 +111,7 @@
                 funcione perfectamente en smartphones, tablets y desktops.
               </p>
             </details>
-            <details data-animate>
+            <details>
               <summary>
                 ¿Puedo actualizar el contenido yo mismo después del lanzamiento?
               </summary>
@@ -120,7 +127,7 @@
 
           <section class="faq" id="precios" aria-labelledby="titulo-precios">
             <h2 id="titulo-precios">Proceso y precios</h2>
-            <details data-animate>
+            <details>
               <summary>¿Cómo funciona el proceso de trabajo?</summary>
               <p>
                 Nuestro proceso consta de 4 fases: 1) Descubrimiento - donde
@@ -130,7 +137,7 @@
                 mejorando basándonos en datos reales.
               </p>
             </details>
-            <details data-animate>
+            <details>
               <summary>¿Cuánto cuesta un proyecto típico?</summary>
               <p>
                 Cada proyecto es único y los costos varían según tus necesidades
@@ -141,7 +148,7 @@
                 inicial.
               </p>
             </details>
-            <details data-animate>
+            <details>
               <summary>¿Ofrecen planes de pago flexibles?</summary>
               <p>
                 Sí, entendemos que la inversión inicial puede ser significativa.
@@ -155,7 +162,7 @@
 
           <section class="faq" id="soporte" aria-labelledby="titulo-soporte">
             <h2 id="titulo-soporte">Soporte y mantenimiento</h2>
-            <details data-animate>
+            <details>
               <summary>¿Ofrecen mantenimiento y soporte continuo?</summary>
               <p>
                 Sí, ofrecemos varios planes de mantenimiento que incluyen
@@ -165,7 +172,7 @@
                 dependiendo de tus necesidades.
               </p>
             </details>
-            <details data-animate>
+            <details>
               <summary>
                 ¿Qué sucede si necesito cambios después del lanzamiento?
               </summary>
@@ -182,7 +189,7 @@
 
           <section class="faq" id="marketing" aria-labelledby="titulo-marketing">
             <h2 id="titulo-marketing">Marketing y SEO</h2>
-            <details data-animate>
+            <details>
               <summary>¿Incluyen optimización SEO en sus proyectos?</summary>
               <p>
                 Sí, todos nuestros sitios web incluyen SEO técnico básico
@@ -193,7 +200,7 @@
                 primeros resultados de Google.
               </p>
             </details>
-            <details data-animate>
+            <details>
               <summary>¿Pueden manejar campañas de marketing digital?</summary>
               <p>
                 Absolutamente. Ofrecemos servicios completos de marketing digital
@@ -203,7 +210,7 @@
                 y reportable.
               </p>
             </details>
-            <details data-animate>
+            <details>
               <summary>¿Cuánto tiempo toma ver resultados de SEO?</summary>
               <p>
                 El SEO es una estrategia a largo plazo. Normalmente empezamos a
@@ -217,7 +224,7 @@
 
           <section class="faq" id="branding" aria-labelledby="titulo-branding">
             <h2 id="titulo-branding">Diseño y branding</h2>
-            <details data-animate>
+            <details>
               <summary>¿Qué incluye un proyecto de branding completo?</summary>
               <p>
                 Un proyecto de branding completo incluye: investigación de mercado
@@ -228,7 +235,7 @@
                 archivos editables en todos los formatos necesarios.
               </p>
             </details>
-            <details data-animate>
+            <details>
               <summary>¿Puedo solicitar revisiones en el diseño?</summary>
               <p>
                 Sí, incluimos múltiples rondas de revisiones en todos nuestros
