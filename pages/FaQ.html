@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Consulta preguntas frecuentes sobre servicios digitales, precios, diseño y mantenimiento en DigitalWave." />
     <title>FAQ — DigitalWave</title>
     <link rel="stylesheet" href="../index.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -16,10 +17,12 @@
     <script defer src="../scripts/menu.js"></script>
   </head>
   <body>
+    <a class="skip-link" href="#contenido">Saltar al contenido</a>
     <header class="site-header">
-      <nav class="main-nav container">
+      <nav class="main-nav container" aria-label="Navegación principal">
         <a class="logo" href="../index.html">
           <svg
+            aria-hidden="true"
             fill="currentColor"
             viewBox="0 0 48 48"
             xmlns="http://www.w3.org/2000/svg"
@@ -28,33 +31,35 @@
               d="M42.4379 44C42.4379 44 36.0744 33.9038 41.1692 24C46.8624 12.9336 42.2078 4 42.2078 4L7.01134 4C7.01134 4 11.6577 12.932 5.96912 23.9969C0.876273 33.9029 7.27094 44 7.27094 44L42.4379 44Z"
             ></path>
           </svg>
-          <h2>DigitalWave</h2>
+          <span>DigitalWave</span>
         </a>
 
-        <button class="hamburger" aria-label="Menú" aria-expanded="false">
+        <button
+          class="hamburger"
+          type="button"
+          aria-label="Menú"
+          aria-expanded="false"
+          aria-controls="navegacion"
+        >
           <span></span>
           <span></span>
           <span></span>
         </button>
 
-        <ul
-          class="nav-links"
-          role="navigation"
-          aria-label="Navegación principal"
-        >
+        <ul class="nav-links" id="navegacion">
           <li><a href="../index.html">Inicio</a></li>
           <li><a href="Servicios.html">Servicios</a></li>
           <li><a href="Testimonios.html">Testimonios</a></li>
-          <li><a href="FaQ.html" class="active">FAQ</a></li>
+          <li><a href="FaQ.html" aria-current="page">FAQ</a></li>
           <li><a href="Contactos.html">Contacto</a></li>
           <li class="theme-toggle-wrapper">
-            <button class="theme-toggle" aria-label="Cambiar tema">🌙</button>
+            <button class="theme-toggle" type="button" aria-label="Tema oscuro" hidden>☾</button>
           </li>
         </ul>
       </nav>
     </header>
 
-    <main>
+    <main id="contenido" tabindex="-1">
       <section class="hero small-hero">
         <div class="container">
           <span class="section-label">Centro de ayuda</span>
@@ -269,12 +274,11 @@
           <div class="cta-content">
             <h2 class="cta-title">¿No Encontraste tu Respuesta?</h2>
             <p class="cta-description">
-              Estamos aquí para ayudarte. Contáctanos y responderemos todas tus
-              preguntas personalizadas
+              Usa el formulario de demostración para preparar tu consulta.
             </p>
             <div class="cta-actions">
-              <a href="Contactos.html" class="btn btn-primary btn-lg"
-                >Contactar Ahora</a
+              <a href="Contactos.html#formulario" class="btn btn-primary btn-lg"
+                >Preparar consulta</a
               >
               <a href="Servicios.html" class="btn btn-secondary btn-lg"
                 >Ver Servicios</a
@@ -307,10 +311,10 @@
             <div class="footer-column">
               <h4>Servicios</h4>
               <ul>
-                <li><a href="Servicios.html">Desarrollo Web</a></li>
-                <li><a href="Servicios.html">Branding</a></li>
-                <li><a href="Servicios.html">Marketing Digital</a></li>
-                <li><a href="Servicios.html">Consultoría</a></li>
+                <li><a href="Servicios.html#desarrollo-web">Desarrollo Web</a></li>
+                <li><a href="Servicios.html#branding">Branding</a></li>
+                <li><a href="Servicios.html#marketing">Marketing Digital</a></li>
+                <li><a href="Servicios.html#consultoria">Consultoría</a></li>
               </ul>
             </div>
             <div class="footer-column">
@@ -321,19 +325,10 @@
                 <li><a href="Contactos.html">Contacto</a></li>
               </ul>
             </div>
-            <div class="footer-column">
-              <h4>Síguenos</h4>
-              <div class="social-links">
-                <a href="#" aria-label="LinkedIn">💼</a>
-                <a href="#" aria-label="Twitter">🐦</a>
-                <a href="#" aria-label="Instagram">📷</a>
-                <a href="#" aria-label="Facebook">📘</a>
-              </div>
-            </div>
           </div>
         </div>
         <div class="footer-bottom">
-          <p>&copy; 2025 DigitalWave. Todos los derechos reservados.</p>
+          <p>DigitalWave · Proyecto de portafolio de <a href="https://github.com/Jose-Familia">José Familia</a></p>
         </div>
       </div>
     </footer>
