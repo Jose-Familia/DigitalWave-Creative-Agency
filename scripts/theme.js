@@ -1,37 +1,37 @@
-// Theme toggle: persists preference in localStorage and updates document
-document.addEventListener("DOMContentLoaded", () => {
-  const toggles = Array.from(document.querySelectorAll(".theme-toggle"));
-  const root = document.documentElement;
-  const saved = localStorage.getItem("dw-theme");
-  const prefersLight =
-    window.matchMedia &&
-    window.matchMedia("(prefers-color-scheme: light)").matches;
-  const current = saved || (prefersLight ? "light" : "dark");
+const themeButton = document.querySelector(".theme-toggle");
+const systemTheme = matchMedia("(prefers-color-scheme: dark)");
+let preferredTheme;
 
-  function updateToggles(t) {
-    toggles.forEach((btn) => {
-      btn.textContent = t === "dark" ? "🌙" : "☀️";
-      btn.setAttribute("aria-pressed", t === "dark" ? "true" : "false");
-      btn.setAttribute(
-        "aria-label",
-        t === "dark" ? "Cambiar a tema claro" : "Cambiar a tema oscuro"
-      );
-    });
+try {
+  preferredTheme = localStorage.getItem("dw-theme");
+} catch {
+  // The theme can still be changed when storage is unavailable.
+}
+
+if (preferredTheme !== "dark" && preferredTheme !== "light") {
+  preferredTheme = null;
+}
+
+function applyTheme() {
+  const theme = preferredTheme ?? (systemTheme.matches ? "dark" : "light");
+  const isDark = theme === "dark";
+  document.documentElement.dataset.theme = theme;
+  themeButton.textContent = isDark ? "☾" : "☀";
+  themeButton.setAttribute("aria-pressed", String(isDark));
+}
+
+applyTheme();
+themeButton.hidden = false;
+
+themeButton.addEventListener("click", () => {
+  preferredTheme = document.documentElement.dataset.theme === "dark" ? "light" : "dark";
+  applyTheme();
+
+  try {
+    localStorage.setItem("dw-theme", preferredTheme);
+  } catch {
+    // Keep the selected theme on this page if storage is unavailable.
   }
-
-  function applyTheme(t) {
-    root.setAttribute("data-theme", t);
-    updateToggles(t);
-  }
-
-  applyTheme(current);
-
-  toggles.forEach((btn) => {
-    btn.addEventListener("click", () => {
-      const next =
-        root.getAttribute("data-theme") === "dark" ? "light" : "dark";
-      applyTheme(next);
-      localStorage.setItem("dw-theme", next);
-    });
-  });
 });
+
+systemTheme.addEventListener("change", applyTheme);
