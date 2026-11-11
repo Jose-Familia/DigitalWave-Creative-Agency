@@ -4,14 +4,14 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="DigitalWave, sitio de demostración de una agencia creativa de desarrollo web, identidad visual y marketing digital." />
+    <script src="scripts/theme.js"></script>
     <link rel="stylesheet" href="index.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&amp;family=DM+Sans:wght@400..700&amp;display=swap"
       rel="stylesheet"
     />
-    <script defer src="scripts/theme.js"></script>
     <script defer src="scripts/animations.js"></script>
     <script defer src="scripts/menu.js"></script>
     <title>DigitalWave - Agencia Digital Creativa</title>
@@ -64,11 +64,11 @@
     <main id="contenido" tabindex="-1">
       <!-- HERO -->
       <section class="hero-main">
-        <div class="container">
+        <div class="container hero-layout">
           <div class="hero-content">
+            <p class="section-label">Agencia creativa digital</p>
             <h1 class="hero-title">
-              Diseño y desarrollo para
-              <span class="gradient-text">marcas digitales</span>
+              Diseño y desarrollo para <span>marcas digitales.</span>
             </h1>
             <p class="hero-description">
               Creamos sitios web, identidades visuales y estrategias de marketing
@@ -79,88 +79,72 @@
                 >Preparar consulta</a
               >
               <a href="pages/Servicios.html" class="btn btn-secondary btn-lg"
-                >Ver Servicios</a
+                >Ver servicios</a
               >
             </div>
+          </div>
+          <div class="hero-art" aria-hidden="true">
+            <img src="assets/digitalwave-hero.webp" alt="" width="960" height="1200" fetchpriority="high" />
           </div>
         </div>
       </section>
 
       <!-- SERVICIOS PREVIEW -->
-      <section class="services-preview">
+      <section class="services-preview services-home">
         <div class="container">
           <div class="section-header">
-            <span class="section-label">Lo que hacemos</span>
-            <h2 class="section-title">Servicios que Impulsan tu Crecimiento</h2>
-            <p class="section-description">
-              Ofrecemos soluciones digitales completas adaptadas a las necesidades
-              de tu negocio
-            </p>
+            <h2 class="section-title">Lo que hacemos</h2>
+            <a class="service-link" href="pages/Servicios.html">
+              Ver todos los servicios <span aria-hidden="true">→</span>
+            </a>
           </div>
 
           <div class="services-grid">
             <article class="service-card" data-animate>
-              <div class="service-icon">🎨</div>
               <h3 class="service-title">Desarrollo Web</h3>
               <p class="service-description">
                 Sitios web modernos, rápidos y responsivos que convierten
                 visitantes en clientes
               </p>
-              <ul class="service-features">
-                <li>Diseño UI/UX Profesional</li>
-                <li>Optimización SEO</li>
-                <li>Performance Superior</li>
-              </ul>
+              <a class="service-link" href="pages/Servicios.html#desarrollo-web" aria-label="Ver detalles de desarrollo web">
+                Ver detalles <span aria-hidden="true">→</span>
+              </a>
             </article>
 
             <article class="service-card" data-animate>
-              <div class="service-icon">✨</div>
               <h3 class="service-title">Branding & Identidad</h3>
               <p class="service-description">
                 Construimos marcas memorables que conectan emocionalmente con tu
                 audiencia
               </p>
-              <ul class="service-features">
-                <li>Logo & Identidad Visual</li>
-                <li>Guías de Marca</li>
-                <li>Estrategia de Marca</li>
-              </ul>
+              <a class="service-link" href="pages/Servicios.html#branding" aria-label="Ver detalles de branding e identidad">
+                Ver detalles <span aria-hidden="true">→</span>
+              </a>
             </article>
 
             <article class="service-card" data-animate>
-              <div class="service-icon">📱</div>
               <h3 class="service-title">Marketing Digital</h3>
               <p class="service-description">
                 Estrategias de marketing que aumentan tu visibilidad y generan
                 resultados reales
               </p>
-              <ul class="service-features">
-                <li>Redes Sociales</li>
-                <li>Google Ads & SEO</li>
-                <li>Email Marketing</li>
-              </ul>
+              <a class="service-link" href="pages/Servicios.html#marketing" aria-label="Ver detalles de marketing digital">
+                Ver detalles <span aria-hidden="true">→</span>
+              </a>
             </article>
 
             <article class="service-card" data-animate>
-              <div class="service-icon">💡</div>
               <h3 class="service-title">Consultoría Digital</h3>
               <p class="service-description">
                 Asesoramiento experto para optimizar tu presencia digital y
                 procesos de negocio
               </p>
-              <ul class="service-features">
-                <li>Auditoría Digital</li>
-                <li>Estrategia de Crecimiento</li>
-                <li>Transformación Digital</li>
-              </ul>
+              <a class="service-link" href="pages/Servicios.html#consultoria" aria-label="Ver detalles de consultoría digital">
+                Ver detalles <span aria-hidden="true">→</span>
+              </a>
             </article>
           </div>
 
-          <div class="section-cta">
-            <a href="pages/Servicios.html" class="btn btn-primary"
-              >Ver Todos los Servicios</a
-            >
-          </div>
         </div>
       </section>
 
@@ -168,13 +152,12 @@
       <section class="process-section">
         <div class="container">
           <div class="section-header">
-            <span class="section-label">Nuestro Método</span>
-            <h2 class="section-title">Proceso Probado para el Éxito</h2>
+            <h2 class="section-title">Cómo trabajamos</h2>
           </div>
 
-          <div class="process-timeline">
-            <div class="process-step" data-animate>
-              <div class="step-number">01</div>
+          <ol class="process-timeline">
+            <li class="process-step" data-animate>
+              <div class="step-number" aria-hidden="true">01</div>
               <div class="step-content">
                 <h3 class="step-title">Descubrimiento</h3>
                 <p class="step-description">
@@ -182,10 +165,10 @@
                   necesidades únicas
                 </p>
               </div>
-            </div>
+            </li>
 
-            <div class="process-step" data-animate>
-              <div class="step-number">02</div>
+            <li class="process-step" data-animate>
+              <div class="step-number" aria-hidden="true">02</div>
               <div class="step-content">
                 <h3 class="step-title">Estrategia</h3>
                 <p class="step-description">
@@ -193,10 +176,10 @@
                   de éxito
                 </p>
               </div>
-            </div>
+            </li>
 
-            <div class="process-step" data-animate>
-              <div class="step-number">03</div>
+            <li class="process-step" data-animate>
+              <div class="step-number" aria-hidden="true">03</div>
               <div class="step-content">
                 <h3 class="step-title">Ejecución</h3>
                 <p class="step-description">
@@ -204,10 +187,10 @@
                   detalle
                 </p>
               </div>
-            </div>
+            </li>
 
-            <div class="process-step" data-animate>
-              <div class="step-number">04</div>
+            <li class="process-step" data-animate>
+              <div class="step-number" aria-hidden="true">04</div>
               <div class="step-content">
                 <h3 class="step-title">Optimización</h3>
                 <p class="step-description">
@@ -215,8 +198,8 @@
                   maximizar el impacto
                 </p>
               </div>
-            </div>
-          </div>
+            </li>
+          </ol>
         </div>
       </section>
 
@@ -225,11 +208,14 @@
         <div class="container">
           <div class="section-header">
             <h2 class="section-title">Ejemplos de testimonios</h2>
+            <a class="service-link" href="pages/Testimonios.html">
+              Ver todos los ejemplos <span aria-hidden="true">→</span>
+            </a>
           </div>
 
           <div class="testimonials-grid">
             <article class="testimonial-card" data-animate>
-              <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+              <div class="testimonial-stars" role="img" aria-label="5 de 5 estrellas">★★★★★</div>
               <blockquote class="testimonial-quote">
                 "DigitalWave transformó completamente nuestra presencia online. El
                 nuevo sitio web aumentó nuestras conversiones en un 300% en solo 3
@@ -244,7 +230,7 @@
             </article>
 
             <article class="testimonial-card" data-animate>
-              <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+              <div class="testimonial-stars" role="img" aria-label="5 de 5 estrellas">★★★★★</div>
               <blockquote class="testimonial-quote">
                 "Profesionales excepcionales. No solo crearon una marca increíble
                 para nosotros, sino que nos guiaron en cada paso del proceso."
@@ -258,7 +244,7 @@
             </article>
 
             <article class="testimonial-card" data-animate>
-              <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+              <div class="testimonial-stars" role="img" aria-label="5 de 5 estrellas">★★★★★</div>
               <blockquote class="testimonial-quote">
                 "La estrategia de marketing digital que desarrollaron superó todas
                 nuestras expectativas. ROI impresionante desde el primer mes."
@@ -312,7 +298,7 @@
               </svg>
               <h3>DigitalWave</h3>
             </div>
-            <p class="footer-tagline">Creando las olas del futuro digital</p>
+            <p class="footer-tagline">Diseño, desarrollo y estrategia digital.</p>
           </div>
 
           <div class="footer-links">
@@ -330,7 +316,7 @@
               <h4>Empresa</h4>
               <ul>
                 <li><a href="pages/Testimonios.html">Testimonios</a></li>
-                <li><a href="pages/FaQ.html">FAQ</a></li>
+                <li><a href="pages/FaQ.html">Preguntas frecuentes</a></li>
                 <li><a href="pages/Contactos.html">Contacto</a></li>
               </ul>
             </div>
